@@ -69,6 +69,11 @@
             display: block;
             animation: fadeIn 2s ease-in-out;
         }
+        #map {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -126,7 +131,7 @@
     <div class="section">
         <h3>店舗情報</h3>
         <p>住所: 埼玉県川越市脇田本町15-22　ニューパレスビル1Ｆ</p>
-        <div id="map" style="width:100%;height:300px;"></div>
+        <div id="map"></div>
         <p>アクセス:</p>
         <ul>
             <li>JR埼京線川越駅から徒歩4分</li>
@@ -155,6 +160,6 @@
             });
         }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8nOleBjKTPVorLwtgDmBjftElJHqC8K0&callback=initMap"></script>
 </body>
 </html>
