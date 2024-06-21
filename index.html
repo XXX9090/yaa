@@ -186,6 +186,7 @@
             border: 2px solid white;
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
         }
         .fixed-banner a:hover {
             background-color: white;
@@ -196,6 +197,31 @@
             font-size: 2em;
             cursor: pointer;
             margin-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .fixed-banner a {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
+            .fixed-banner .close {
+                font-size: 1.5em;
+                margin-left: 10px;
+            }
+        }
+        .card {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -224,40 +250,42 @@
         </div>
         <div class="section" data-aos="fade-up">
             <h3>オンライン服薬指導の流れ</h3>
-            <div class="step" data-aos="fade-left">
-                <h4>病院・クリニックでの受診</h4>
-                <img src="23958211_l.jpg" alt="病院・クリニックでの受診">
-                <p>受診時には「オンライン服薬指導を利用したい」とお伝えください。</p>
-                <p>※処方せんは医療機関から川越駅前薬局にFAXしてもらうため、「受け取らない」ようにご注意ください。</p>
-                <p>※もし処方せんをお持ちの場合は、服薬指導の前に薬局に提出してください。</p>
-            </div>
-            <div class="step" data-aos="fade-right">
-                <h4>店舗での予約</h4>
-                <img src="29311077_l.jpg" alt="店舗での予約">
-                <p>オンライン服薬指導の希望日時をLINEでご予約ください。</p>
-                <p>※オンライン服薬指導のご利用は、処方せん発行日から4日以内に限ります。</p>
-            </div>
-            <div class="step" data-aos="fade-left">
-                <h4>LINE電話でのお薬説明</h4>
-                <img src="26883956_l.jpg" alt="LINE電話でのお薬説明">
-                <p>患者様は自宅などのプライベートな場所で、オンライン服薬指導（お薬説明）を受けていただきます。</p>
-                <p>※ご利用には店舗とLINEで友だち登録が必要です。</p>
-                <p><a class="btn" href="https://lin.ee/g6sESFi"><i class="fas fa-phone-alt"></i> オンライン服薬指導を受ける</a></p>
-            </div>
-            <div class="step" data-aos="fade-right">
-                <div class="info-box">
-                    <h4>お薬のお受け取り</h4>
-                    <p>お薬は配送業者によって自宅に配送されます。または薬局の窓口で受け取ることも可能です。</p>
+            <div class="card" data-aos="fade-left">
+                <img src="https://via.placeholder.com/50" alt="病院のアイコン">
+                <div>
+                    <h4>病院・クリニックでの受診</h4>
+                    <p>受診時には「オンライン服薬指導を利用したい」とお伝えください。</p>
+                    <p>※処方せんは医療機関から川越駅前薬局にFAXしてもらうため、「受け取らない」ようにご注意ください。</p>
+                    <p>※もし処方せんをお持ちの場合は、服薬指導の前に薬局に提出してください。</p>
                 </div>
-                <div class="info-box">
-                    <h4>処方箋原本をお持ちの方</h4>
-                    <p>ご予約いただいた後に、処方箋原本を薬局に郵送または持参してください。</p>
+            </div>
+            <div class="card" data-aos="fade-right">
+                <img src="https://via.placeholder.com/50" alt="予約のアイコン">
+                <div>
+                    <h4>LINEでオンライン服薬指導予約</h4>
+                    <p>オンライン服薬指導の希望日時をLINEでご予約ください。</p>
+                    <p>※オンライン服薬指導のご利用は、処方せん発行日から4日以内に限ります。</p>
                 </div>
-                <div class="info-box">
-                    <h4>処方箋原本をお持ちでない方</h4>
-                    <p>ご希望の日時をご予約ください。</p>
-                    <p>※オンライン服薬指導の予約時間までに処方箋原本が薬局に届いていることが必要です。</p>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <img src="https://via.placeholder.com/50" alt="LINE電話のアイコン">
+                <div>
+                    <h4>LINE電話でのお薬説明</h4>
+                    <p>患者様は自宅などのプライベートな場所で、オンライン服薬指導（お薬説明）を受けていただきます。</p>
+                    <p>※ご利用には店舗とLINEで友だち登録が必要です。</p>
+                    <p><a class="btn" href="https://lin.ee/g6sESFi"><i class="fas fa-phone-alt"></i> オンライン服薬指導を受ける</a></p>
                 </div>
+            </div>
+            <div class="card" data-aos="fade-right">
+                <img src="https://via.placeholder.com/50" alt="処方せんのアイコン">
+                <div class="info-box">
+                    <h4>処方箋の送付</h4>
+                    <p>処⽅箋は、病院・クリニックから薬局へ直接FAX送信されます。</p>
+                    <p>※処方箋原本は、病院・クリニックから薬局へ送付されますので、患者様が処方せんを薬局に持参する必要はありません。</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <img src="https://via.placeholder.com/50" alt="支払いのアイコン">
                 <div class="info-box">
                     <h4>お支払い</h4>
                     <p>オンライン決済（クレジット情報入力）にてお支払い完了後、お薬を配送致します。</p>
@@ -310,9 +338,7 @@
         <img src="https://via.placeholder.com/300" alt="スタッフの写真" class="illustration" data-aos="zoom-in">
     </footer>
     <div class="fixed-banner" id="fixed-banner">
-        <div>
-            <a href="https://lin.ee/g6sESFi"><i class="fab fa-line"></i> LINEでオンライン服薬指導を予約</a>
-        </div>
+        <a href="https://lin.ee/g6sESFi"><i class="fab fa-line"></i> LINEでオンライン服薬指導を予約</a>
         <div class="close" id="close-banner">&times;</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
