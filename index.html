@@ -8,14 +8,14 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f0f8ff;
             color: #333;
             text-align: center;
             overflow-x: hidden;
         }
         header {
-            background-color: #87ceeb;
+            background-color: #0066cc;
             color: white;
             padding: 20px;
             text-align: center;
@@ -24,10 +24,22 @@
         header img {
             max-width: 100px;
         }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            padding: 20px;
             text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             animation: fadeInUp 1s ease-in-out;
+        }
+        .section h2, .section h3 {
+            color: #0066cc;
         }
         .btn {
             display: inline-block;
@@ -38,15 +50,18 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2em;
-            animation: fadeIn 2s ease-in-out;
+            transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .btn:hover {
             background-color: #1c86ee;
         }
         footer {
             margin-top: 20px;
+            padding: 20px;
+            background-color: #0066cc;
+            color: white;
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
         }
         ul {
             list-style-type: none;
@@ -60,7 +75,8 @@
             border-radius: 5px;
             display: inline-block;
             text-align: left;
-            animation: fadeIn 2s ease-in-out;
+            width: 80%;
+            max-width: 500px;
         }
         img.illustration {
             width: 100%;
@@ -73,6 +89,19 @@
             width: 100%;
             height: 300px;
             margin: 20px 0;
+        }
+        .step {
+            text-align: left;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .step h4 {
+            color: #0066cc;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -104,65 +133,67 @@
         <img src="unnamed (3).png" alt="川越駅前薬局のロゴ">
         <h1>川越駅前薬局</h1>
     </header>
-    <div class="section">
-        <h2>オンライン服薬指導</h2>
-        <p>川越駅前薬局では、オンラインでの服薬指導を提供しています。お忙しい方でも自宅から簡単に専門家と相談できます。</p>
-        <img src="followup03.png" alt="オンライン服薬指導のイラスト" class="illustration">
-    </div>
-    <div class="section">
-        <h3>メリット</h3>
-        <ul>
-            <li>時間の節約</li>
-            <li>専門家との直接相談</li>
-            <li>自宅からの便利なアクセス</li>
-        </ul>
-        <img src="461765-1024x768.png" alt="メリットのイラスト" class="illustration">
-    </div>
-    <a class="btn" href="https://lin.ee/g6sESFi">LINEで相談する</a>
-    <div class="section">
-        <h3>よくある質問</h3>
-        <ul>
-            <li>Q: どうやってオンライン服薬指導を受けますか？<br>A: LINE公式アカウントから友だち追加し、チャットで「オンライン服薬指導」と入力してください。</li>
-            <li>Q: オンライン服薬指導は有料ですか？<br>A: 基本サービスは無料ですが、一部有料のサービスもございます。</li>
-            <li>Q: オンラインでの相談時間は？<br>A: 営業時間内であればいつでもご利用いただけます。</li>
-        </ul>
-        <img src="https://via.placeholder.com/300" alt="質問のイラスト" class="illustration">
-    </div>
-    <div class="section">
-        <h3>店舗情報</h3>
-        <p>住所: 埼玉県川越市脇田本町15-22　ニューパレスビル1Ｆ</p>
-        <div id="map"></div>
-        <p>アクセス:</p>
-        <ul>
-            <li>JR埼京線川越駅から徒歩4分</li>
-            <li>JR川越線川越駅から徒歩4分</li>
-            <li>東武東上線川越市駅から徒歩12分</li>
-            <li>西武新宿線本川越駅から徒歩13分</li>
-        </ul>
-        <p>TEL: <a href="tel:+815018089599">050-1808-9599</a></p>
-    </div>
-    <div class="section">
-        <h3>オンライン服薬指導の流れ</h3>
-        <div class="step">
-            <h4>病院・クリニックでの受診</h4>
-            <p>受診時には「オンライン服薬指導を利用したい」とお伝えください。</p>
-            <p>※処方せんは医療機関から川越駅前薬局にFAXしてもらうため、「受け取らない」ようにご注意ください。</p>
-            <p>※もし処方せんをお持ちの場合は、服薬指導の前に薬局に提出してください。</p>
+    <div class="container">
+        <div class="section">
+            <h2>オンライン服薬指導</h2>
+            <p>川越駅前薬局では、オンラインでの服薬指導を提供しています。お忙しい方でも自宅から簡単に専門家と相談できます。</p>
+            <img src="followup03.png" alt="オンライン服薬指導のイラスト" class="illustration">
         </div>
-        <div class="step">
-            <h4>店舗での予約</h4>
-            <p>オンライン服薬指導の希望日時をLINEでご予約ください。</p>
-            <p>※オンライン服薬指導のご利用は、処方せん発行日から4日以内に限ります。</p>
+        <div class="section">
+            <h3>メリット</h3>
+            <ul>
+                <li>時間の節約</li>
+                <li>専門家との直接相談</li>
+                <li>自宅からの便利なアクセス</li>
+            </ul>
+            <img src="461765-1024x768.png" alt="メリットのイラスト" class="illustration">
         </div>
-        <div class="step">
-            <h4>LINE電話でのお薬説明</h4>
-            <p>患者様は自宅などのプライベートな場所で、オンライン服薬指導（お薬説明）を受けていただきます。</p>
-            <p>※ご利用には店舗とLINEで友だち登録が必要です。</p>
-            <p><a class="btn" href="https://lin.ee/g6sESFi">お友だち登録はこちら！</a></p>
+        <a class="btn" href="https://lin.ee/g6sESFi">LINEで相談する</a>
+        <div class="section">
+            <h3>よくある質問</h3>
+            <ul>
+                <li>Q: どうやってオンライン服薬指導を受けますか？<br>A: LINE公式アカウントから友だち追加し、チャットで「オンライン服薬指導」と入力してください。</li>
+                <li>Q: オンライン服薬指導は有料ですか？<br>A: 基本サービスは無料ですが、一部有料のサービスもございます。</li>
+                <li>Q: オンラインでの相談時間は？<br>A: 営業時間内であればいつでもご利用いただけます。</li>
+            </ul>
+            <img src="https://via.placeholder.com/300" alt="質問のイラスト" class="illustration">
         </div>
-        <div class="step">
-            <h4>お薬のお受け取り</h4>
-            <p>お薬は配送業者によって自宅に配送されます。または薬局の窓口で受け取ることも可能です。</p>
+        <div class="section">
+            <h3>店舗情報</h3>
+            <p>住所: 埼玉県川越市脇田本町15-22　ニューパレスビル1Ｆ</p>
+            <div id="map"></div>
+            <p>アクセス:</p>
+            <ul>
+                <li>JR埼京線川越駅から徒歩4分</li>
+                <li>JR川越線川越駅から徒歩4分</li>
+                <li>東武東上線川越市駅から徒歩12分</li>
+                <li>西武新宿線本川越駅から徒歩13分</li>
+            </ul>
+            <p>TEL: <a href="tel:+815018089599">050-1808-9599</a></p>
+        </div>
+        <div class="section">
+            <h3>オンライン服薬指導の流れ</h3>
+            <div class="step">
+                <h4>病院・クリニックでの受診</h4>
+                <p>受診時には「オンライン服薬指導を利用したい」とお伝えください。</p>
+                <p>※処方せんは医療機関から川越駅前薬局にFAXしてもらうため、「受け取らない」ようにご注意ください。</p>
+                <p>※もし処方せんをお持ちの場合は、服薬指導の前に薬局に提出してください。</p>
+            </div>
+            <div class="step">
+                <h4>店舗での予約</h4>
+                <p>オンライン服薬指導の希望日時をLINEでご予約ください。</p>
+                <p>※オンライン服薬指導のご利用は、処方せん発行日から4日以内に限ります。</p>
+            </div>
+            <div class="step">
+                <h4>LINE電話でのお薬説明</h4>
+                <p>患者様は自宅などのプライベートな場所で、オンライン服薬指導（お薬説明）を受けていただきます。</p>
+                <p>※ご利用には店舗とLINEで友だち登録が必要です。</p>
+                <p><a class="btn" href="https://lin.ee/g6sESFi">お友だち登録はこちら！</a></p>
+            </div>
+            <div class="step">
+                <h4>お薬のお受け取り</h4>
+                <p>お薬は配送業者によって自宅に配送されます。または薬局の窓口で受け取ることも可能です。</p>
+            </div>
         </div>
     </div>
     <footer>
