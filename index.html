@@ -162,39 +162,40 @@
                 transform: translateY(0);
             }
         }
-        /* Popup Styles */
-        .popup {
+        /* Fixed Banner Styles */
+        .fixed-banner {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .popup-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
+            background-color: #28a745;
+            color: white;
             text-align: center;
-            max-width: 400px;
-            width: 90%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 0.5s;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
         }
-        .popup-content h2 {
-            margin-top: 0;
-        }
-        .popup-content .btn {
-            margin: 10px 0;
-        }
-        .popup-content .close {
-            cursor: pointer;
-            color: #007bff;
+        .fixed-banner a {
+            color: white;
             font-size: 1.2em;
-            margin-top: 10px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .fixed-banner a:hover {
+            background-color: white;
+            color: #28a745;
+            transform: scale(1.1);
+        }
+        .fixed-banner .close {
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-left: 20px;
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -308,13 +309,11 @@
         <img src="https://via.placeholder.com/300" alt="薬局の外観" class="illustration" data-aos="zoom-in">
         <img src="https://via.placeholder.com/300" alt="スタッフの写真" class="illustration" data-aos="zoom-in">
     </footer>
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>LINEで簡単に相談できます！</h2>
-            <p>下のボタンをクリックして、LINEでのオンライン相談を始めましょう。</p>
-            <a class="btn" href="https://lin.ee/g6sESFi"><i class="fab fa-line"></i> LINEで相談する</a>
-            <div class="close" id="close-popup">閉じる</div>
+    <div class="fixed-banner" id="fixed-banner">
+        <div>
+            <a href="https://lin.ee/g6sESFi"><i class="fab fa-line"></i> LINEで相談する</a>
         </div>
+        <div class="close" id="close-banner">&times;</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -333,18 +332,12 @@
             });
         }
 
-        // ポップアップ表示のためのJavaScript
+        // 固定バナーの表示と閉じる機能
         window.onload = function() {
-            var popup = document.getElementById('popup');
-            var close = document.getElementById('close-popup');
-            popup.style.display = 'flex';
+            var banner = document.getElementById('fixed-banner');
+            var close = document.getElementById('close-banner');
             close.onclick = function() {
-                popup.style.display = 'none';
-            }
-            window.onclick = function(event) {
-                if (event.target == popup) {
-                    popup.style.display = 'none';
-                }
+                banner.style.display = 'none';
             }
         }
     </script>
