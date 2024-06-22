@@ -236,13 +236,12 @@
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YZD2QG1HW"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16551825461"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-7YZD2QG1HW');
+      gtag('config', 'AW-16551825461');
     </script>
 </head>
 <body>
@@ -257,7 +256,7 @@
             <h2>オンライン服薬指導</h2>
             <p>川越駅前薬局では、オンラインでの服薬指導を提供しています。お忙しい方でも自宅から簡単に専門家と相談できます。</p>
             <img src="26883954_l.jpg" alt="オンライン服薬指導のイラスト" class="illustration" loading="lazy" data-aos="zoom-in">
-            <a class="btn" href="https://lin.ee/g6sESFi"><i class="fas fa-phone-alt"></i> 今すぐ相談</a>
+            <a class="btn" href="https://lin.ee/g6sESFi" id="conversionButton"><i class="fas fa-phone-alt"></i> 今すぐ相談</a>
             <a class="btn" href="contact.html"><i class="fas fa-envelope"></i> お問い合わせ</a>
         </div>
         <div class="section" data-aos="fade-up">
@@ -372,5 +371,10 @@
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8nOleBjKTPVorLwtgDmBjftElJHqC8K0&callback=initMap"></script>
+    <script>
+        document.getElementById('conversionButton').addEventListener('click', function() {
+            gtag('event', 'conversion', {'send_to': 'AW-16551825461/5FyrCJy5vrwZELWgw9Q9'});
+        });
+    </script>
 </body>
 </html>
